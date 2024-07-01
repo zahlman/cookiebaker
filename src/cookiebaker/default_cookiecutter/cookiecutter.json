@@ -1,0 +1,12 @@
+{
+    "project_name": "",
+    "__project_slug": "{{ cookiecutter.project_name | lower | replace(' ', '_') | replace('-', '_') }}",
+    "project_short_description": "(TBD)",
+    "github_username": "",
+    "versioning": ["semver", "calver"],
+    "open_source_license": ["MIT", "BSD", "ISC", "ASL2", "GPL3", ""],
+    "__full_name": "",
+    "__email": "",
+    "__year": "",
+    "__month": ""
+}
