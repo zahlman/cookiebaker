@@ -1,14 +1,11 @@
 {%- set is_open_source = cookiecutter.open_source_license != '' -%}
-{%- set lower_name = cookiecutter.project_name | lower -%}
-{%- set pypi_slug = lower_name | replace(' ', '_') | replace('-', '_') -%}
-{%- set github_base = "https://github.com/" ~ cookiecutter.github_username -%}
 {%- if cookiecutter.versioning == 'semver' -%}
-  {%- set version = "0.1.0" -%}
+{%- set version = "0.1.0" -%}
 {%- else -%}
-  {%- set version = '{}.{}.0'.format(cookiecutter.__year, cookiecutter.__month) -%}
+{%- set version = '{}.{}.0'.format(cookiecutter.__year, cookiecutter.__month) -%}
 {%- endif -%}
 [project]
-name = "{{ pypi_slug }}"
+name = "{{ cookiecutter.__pypi_slug }}"
 version = "{{ version }}"
 description = "{{ cookiecutter.project_short_description }}"
 readme = "README.md"
@@ -23,7 +20,10 @@ license = {file = "LICENSE.txt"}
 name = "{{ cookiecutter.__full_name }}"
 email = "{{ cookiecutter.__email }}"
 
+{% if cookiecutter.github_username != '' -%}
+{%- set github_base = "https://github.com/" ~ cookiecutter.github_username -%}
 [project.urls]
 bugs = "{{ github_base }}/issues"
 changelog = "{{ github_base }}/blob/master/changelog.md"
 homepage = "{{ github_base }}"
+{%- endif %}
