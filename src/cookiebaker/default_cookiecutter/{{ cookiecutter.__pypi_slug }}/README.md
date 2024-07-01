@@ -1,10 +1,5 @@
-{%- set license_code = cookiecutter.license_code -%}
-{%- set is_open_source = license_code != '' -%}
-{%- if license_code == 'MIT' -%}
-{%- set license_name = 'the MIT License' -%}
-{%- elif license_code == 'UN' -%}
-{%- set license_name = 'The Unlicense' -%}
-{%- endif -%}
+{%- set license_name = cookiecutter.license_name -%}
+{%- set is_open_source = license_name != '' -%}
 # {{ cookiecutter.__project_name }} - {{ cookiecutter.project_short_description }}
 
 {% if is_open_source -%}
@@ -25,6 +20,6 @@ See full documentation at https://{{ cookiecutter.__rtd_slug }}.readthedocs.io.
 Copyright &copy; {{ cookiecutter.__year }} {{ cookiecutter.__full_name }}
 
 {% if is_open_source -%}
-This project is open source software, licensed under the terms of {{ license_name }}.
+This project is open source software, distributed under the terms of the {{ license_name }}.
 Please see `LICENSE.txt` for details.
 {%- endif %}

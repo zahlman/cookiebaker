@@ -1,4 +1,4 @@
-{%- set is_open_source = cookiecutter.license_code != '' -%}
+{%- set is_open_source = cookiecutter.license_name != '' -%}
 {%- if cookiecutter.versioning == 'semver' -%}
 {%- set version = "0.1.0" -%}
 {%- else -%}
