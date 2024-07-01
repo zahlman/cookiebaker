@@ -3,7 +3,7 @@
     "github_username": "",
     "pypi_username": "{{ cookiecutter.github_username }}",
     "versioning": ["semver", "calver"],
-    "open_source_license": ["MIT", "BSD", "ISC", "ASL2", "GPL3", ""],
+    "license_code": ["MIT", "UN", ""],
     "__project_name": "",
     "__pypi_slug": "",
     "__rtd_slug": "",
