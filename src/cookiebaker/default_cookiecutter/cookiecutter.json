@@ -10,5 +10,6 @@
     "__full_name": "",
     "__email": "",
     "__year": "",
-    "__month": ""
+    "__month": "",
+    "__gitignore": ".gitignore"
 }
