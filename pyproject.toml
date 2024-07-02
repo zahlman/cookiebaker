@@ -1,10 +1,10 @@
 [project]
 name = "cookiebaker"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 readme = "README.md"
 classifiers = [
-    "Development Status :: 1 - Planning",
+    "Development Status :: 2 - Pre-Alpha",
     "Programming Language :: Python :: 3"
 ]
 dependencies = [ "cookiecutter" ]
