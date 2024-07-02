@@ -1,12 +1,6 @@
-{%- set is_open_source = cookiecutter.license_name != '' -%}
-{%- if cookiecutter.versioning == 'semver' -%}
-{%- set version = "0.1.0" -%}
-{%- else -%}
-{%- set version = '{}.{}.0'.format(cookiecutter.__year, cookiecutter.__month) -%}
-{%- endif -%}
 [project]
 name = "{{ cookiecutter.__pypi_slug }}"
-version = "{{ version }}"
+version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_short_description }}"
 readme = "README.md"
 classifiers = [
