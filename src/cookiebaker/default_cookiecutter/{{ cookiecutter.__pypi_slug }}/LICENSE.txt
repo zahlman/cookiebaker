@@ -1,1 +1,3 @@
-{%- include cookiecutter.license_name -%}
+{%- if cookiecutter.license_spdx != '' -%}
+{%- include cookiecutter.license_spdx -%}
+{%- endif -%}

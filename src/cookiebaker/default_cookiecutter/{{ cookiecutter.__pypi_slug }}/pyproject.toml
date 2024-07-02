@@ -8,7 +8,9 @@ classifiers = [
     "Programming Language :: Python :: 3"
 ]
 dependencies = [ ]
+{% if cookiecutter.license_spdx != '' -%}
 license = {file = "LICENSE.txt"}
+{%- endif %}
 
 [[project.authors]]
 name = "{{ cookiecutter.__full_name }}"
