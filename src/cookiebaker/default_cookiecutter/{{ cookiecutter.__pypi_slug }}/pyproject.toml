@@ -21,7 +21,7 @@ name = "{{ cookiecutter.__full_name }}"
 email = "{{ cookiecutter.__email }}"
 
 {% if cookiecutter.github_username != '' -%}
-{%- set github_base = "https://github.com/" ~ cookiecutter.github_username -%}
+{%- set github_base = "https://github.com/" ~ cookiecutter.github_username ~ "/" ~ cookiecutter.__pypi_slug -%}
 [project.urls]
 bugs = "{{ github_base }}/issues"
 changelog = "{{ github_base }}/blob/master/changelog.md"
